@@ -11,6 +11,8 @@ export const ProfileSocial = ({ data }: ProfileSocialProps) => (
         href={profile.url}
         key={profile.name}
         className="text-sm text-primary no-underline"
+        target="_blank"
+        rel="noreferrer"
       >
         <Icon name={profile.name} />
       </a>

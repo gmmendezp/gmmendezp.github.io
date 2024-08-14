@@ -8,7 +8,7 @@ interface ProjectsProps {
 }
 
 export const Projects = ({ projects }: ProjectsProps) => (
-  <Section id="projects" className="bg-main3">
+  <Section id="portfolio" className="bg-main3">
     <SectionTitle>Portfolio</SectionTitle>
     <SectionBody className="flex flex-wrap justify-between gap-12">
       {projects?.map((project) => (

@@ -17,6 +17,7 @@ export const ProjectButton = ({
     <Link
       href={url}
       target="_blank"
+      rel="noreferrer"
       className={clsx("max-sm:w-full sm:ml-1", className)}
     >
       <Button className="w-[80px]">{children}</Button>
