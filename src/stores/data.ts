@@ -14,22 +14,8 @@ export const useDataStore = create(() => ({
     },
     {
       institution: "Udacity",
-      area: "Machine Learning",
-      studyType: "Online Nanodegree",
-      startDate: "2016",
-      endDate: "Current",
-    },
-    {
-      institution: "Udacity",
       area: "Front End Web Development",
       studyType: "Online Nanodegree",
-      startDate: "2016",
-      endDate: "2016",
-    },
-    {
-      institution: "Coursera",
-      area: "Data Structures and Algorithms",
-      studyType: "Online Specialization",
       startDate: "2016",
       endDate: "2016",
     },
