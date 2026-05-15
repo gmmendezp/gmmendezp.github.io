@@ -1,4 +1,4 @@
-import { Section } from "./Section";
+import { Section } from ".";
 import SectionBody from "./SectionBody";
 import SectionTitle from "./SectionTitle";
 

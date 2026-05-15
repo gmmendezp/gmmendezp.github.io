@@ -1,4 +1,4 @@
-import { Education } from "./Education";
+import { Education } from ".";
 
 export default (
   <Education

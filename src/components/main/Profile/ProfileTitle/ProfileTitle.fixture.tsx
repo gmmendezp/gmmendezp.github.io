@@ -1,4 +1,4 @@
-import { ProfileTitle } from "./ProfileTitle";
+import { ProfileTitle } from ".";
 
 export default (
   <ProfileTitle

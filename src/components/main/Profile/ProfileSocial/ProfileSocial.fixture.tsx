@@ -1,4 +1,4 @@
-import { ProfileSocial } from "./ProfileSocial";
+import { ProfileSocial } from ".";
 
 export default (
   <ProfileSocial
