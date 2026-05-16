@@ -39,9 +39,9 @@ describe("Image", () => {
     expect(img?.getAttribute("src")).not.toBe("profile.jpg");
   });
 
-  it("renders with empty image string", () => {
+  it("omits src attribute for empty image string", () => {
     const { container } = render(<Image image="" />);
-    expect(container.querySelector("img")).toHaveAttribute("src", "");
+    expect(container.querySelector("img")).not.toHaveAttribute("src");
   });
 
   it("passes additional img props to the element", () => {
