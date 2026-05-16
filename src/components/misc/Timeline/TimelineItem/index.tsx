@@ -9,19 +9,19 @@ export const TimelineItem = ({ children }: TimelineItemProps) => (
   <li
     className={clsx(
       "relative list-none w-[6px] my-0 mx-auto pt-[50px] bg-menu text-secondary tracking-wider",
-      "[&>.item]:odd:left-[45px] [&>.arrow]:odd:left-[30px]",
-      "[&>.arrow]:odd:border-r-[16px] [&>.arrow]:odd:border-l-0",
-      "[&>.arrow]:odd:border-r-menu [&>.arrow]:odd:border-l-transparent",
-      "[&>.item]:even:left-[-440px] [&>.arrow]:even:right-[30px]",
-      "[&>.arrow]:even:border-r-0 [&>.arrow]:even:border-l-[16px]",
-      "[&>.arrow]:even:border-r-transparent [&>.arrow]:even:border-l-menu",
-      "max-xl:[&>.item]:even:left-[-390px]",
-      "max-lg:[&>.item]:even:left-[-290px]",
+      "odd:[&>.item]:left-[45px] odd:[&>.arrow]:left-[30px]",
+      "odd:[&>.arrow]:border-r-[16px] odd:[&>.arrow]:border-l-0",
+      "odd:[&>.arrow]:border-r-menu odd:[&>.arrow]:border-l-transparent",
+      "even:[&>.item]:left-[-440px] even:[&>.arrow]:right-[30px]",
+      "even:[&>.arrow]:border-r-0 even:[&>.arrow]:border-l-[16px]",
+      "even:[&>.arrow]:border-r-transparent even:[&>.arrow]:border-l-menu",
+      "max-xl:even:[&>.item]:left-[-390px]",
+      "max-lg:even:[&>.item]:left-[-290px]",
       "max-md:ml-0",
-      "max-md:[&>.arrow]:even:left-[30px]",
-      "max-md:[&>.arrow]:even:border-r-[16px] max-md:[&>.arrow]:even:border-l-0",
-      "max-md:[&>.arrow]:even:border-r-menu max-md:[&>.arrow]:even:border-l-transparent",
-      "max-md:[&>.item]:even:left-[45px]",
+      "max-md:even:[&>.arrow]:left-[30px]",
+      "max-md:even:[&>.arrow]:border-r-[16px] max-md:even:[&>.arrow]:border-l-0",
+      "max-md:even:[&>.arrow]:border-r-menu max-md:even:[&>.arrow]:border-l-transparent",
+      "max-md:even:[&>.item]:left-[45px]",
     )}
   >
     <span
