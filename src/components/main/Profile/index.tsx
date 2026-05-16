@@ -16,7 +16,10 @@ interface ProfileProps {
 
 export const Profile = ({ social, info }: ProfileProps) => (
   <section className="flex flex-wrap gap-3 justify-center bg-main1 text-primary pt-24 px-0 pb-16">
-    <ProfileImage image={info.image} />
+    <ProfileImage
+      image={info.image}
+      alt={`Portrait of ${info.firstName} ${info.lastName}`}
+    />
     <ProfileSocial data={social} />
     <Separator className="w-11/12 max-w-screen-sm" />
     <ProfileTitle data={info} />

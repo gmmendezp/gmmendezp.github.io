@@ -17,8 +17,11 @@ describe("About", () => {
     expect(screen.getByText("third paragraph")).toBeInTheDocument();
   });
 
-  it("has about-text class on paragraphs", () => {
+  it("applies readable paragraph styles", () => {
     render(<About data={["text"]} />);
-    expect(screen.getByText("text")).toHaveClass("about-text");
+    expect(screen.getByText("text")).toHaveClass(
+      "leading-7",
+      "tracking-normal",
+    );
   });
 });

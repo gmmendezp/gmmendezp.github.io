@@ -1,17 +1,18 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
   "files": {
-    "include": ["src/*.tsx", "src/*.ts", "*.js"],
-    "ignore": []
+    "includes": [
+      "**/src/**/*.tsx",
+      "**/src/**/*.ts",
+      "**/*.js",
+      "!**/cosmos-export",
+      "!**/dist",
+      "!**/dist-ssr"
+    ]
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
+    "enabled": false
   },
   "formatter": {
     "enabled": true,

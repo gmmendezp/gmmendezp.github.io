@@ -26,8 +26,10 @@ describe("Menu", () => {
   });
 
   it("renders menu toggle button", () => {
-    const { container } = render(<Menu sections={sections} />);
-    expect(container.querySelector("svg")).toBeInTheDocument();
+    render(<Menu sections={sections} />);
+    expect(
+      screen.getByRole("button", { name: /toggle navigation menu/i }),
+    ).toBeInTheDocument();
   });
 
   it("starts with nav hidden on mobile", () => {
@@ -41,7 +43,9 @@ describe("Menu", () => {
     const user = userEvent.setup();
     const { container } = render(<Menu sections={sections} />);
     const nav = container.querySelector("nav");
-    const toggleButton = container.querySelector("svg")?.closest("a");
+    const toggleButton = screen.getByRole("button", {
+      name: /toggle navigation menu/i,
+    });
 
     await user.click(toggleButton);
 

@@ -38,7 +38,7 @@ export const TimelineItem = ({ children }: TimelineItemProps) => (
     <span
       className={clsx(
         "arrow",
-        "absolute bottom-[22px] width-0 height-0",
+        "absolute bottom-[22px] h-0 w-0",
         "border-solid border-y-transparent border-y-8",
       )}
     />

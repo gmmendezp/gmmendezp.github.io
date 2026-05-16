@@ -7,15 +7,16 @@ interface ProfileSocialProps {
 export const ProfileSocial = ({ data }: ProfileSocialProps) => (
   <ul className="flex justify-center w-full list-none p-0 gap-12">
     {(data || []).map((profile) => (
-      <a
-        href={profile.url}
-        key={profile.name}
-        className="text-sm text-primary no-underline"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Icon name={profile.name} />
-      </a>
+      <li key={profile.name}>
+        <a
+          href={profile.url}
+          className="text-sm text-primary no-underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name={profile.name} />
+        </a>
+      </li>
     ))}
   </ul>
 );

@@ -12,7 +12,7 @@ export const About = ({ data }: AboutType) => {
       <SectionTitle>About</SectionTitle>
       <SectionBody>
         {data?.map((p) => (
-          <p className="about-text" key={p}>
+          <p className="leading-7 tracking-normal" key={p}>
             {p}
           </p>
         ))}

@@ -6,7 +6,7 @@ interface TimelineProps {
 }
 
 export const Timeline = ({ children }: TimelineProps) => (
-  <ul className="timeline">
+  <ul>
     {React.Children.map(children, (child) => (
       <TimelineItem>{child}</TimelineItem>
     ))}

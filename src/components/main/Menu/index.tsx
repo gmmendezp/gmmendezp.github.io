@@ -10,9 +10,11 @@ interface MenuProps {
 export const Menu = ({ sections }: MenuProps) => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
+
   return (
     <section>
       <nav
+        id="main-menu"
         className={clsx(
           "max-w-7xl flex flex-wrap justify-end fixed z-20 w-full bg-menu mt-0 p-0 list-none max-md:top-12",
           showMenu
@@ -31,12 +33,16 @@ export const Menu = ({ sections }: MenuProps) => {
         ))}
       </nav>
       <div className="max-md:flex max-md:justify-end fixed z-30 w-full bg-menu hidden">
-        <Link
-          className="m-1.5 p-2.5 f-bold border-1 border-solid border-white rounded lowercase"
+        <button
+          type="button"
+          aria-controls="main-menu"
+          aria-expanded={showMenu}
+          aria-label="Toggle navigation menu"
+          className="m-1.5 rounded border border-solid border-white p-2.5 font-bold lowercase"
           onClick={toggleMenu}
         >
           <MenuIcon />
-        </Link>
+        </button>
       </div>
     </section>
   );

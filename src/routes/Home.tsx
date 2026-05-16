@@ -11,7 +11,7 @@ const Home = () => {
   const { about, education, experience, info, projects, social, footer } =
     useDataStore();
   return (
-    <div className="max-w-7xl mx-auto xy-0 relative">
+    <div className="relative mx-auto max-w-7xl">
       <Menu
         sections={[
           { name: "About", href: "#about" },
