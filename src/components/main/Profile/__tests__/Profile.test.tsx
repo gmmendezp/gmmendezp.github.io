@@ -11,7 +11,7 @@ describe("Profile", () => {
     lastName: "Doe",
     label: "Developer",
     email: "john@example.com",
-    image: "profile.jpg",
+    image: "profile.webp",
   };
 
   it("renders name and label", () => {

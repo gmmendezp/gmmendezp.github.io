@@ -16,7 +16,7 @@ export const Menu = ({ sections }: MenuProps) => {
       <nav
         id="main-menu"
         className={clsx(
-          "max-w-7xl flex flex-wrap justify-end fixed z-20 w-full bg-menu mt-0 p-0 list-none max-md:top-12",
+          "max-w-7xl flex flex-wrap justify-end fixed z-30 w-full bg-menu mt-0 p-0 list-none max-md:top-12",
           showMenu
             ? "max-md:translate-y-px ease-in-out duration-500 border-t-1 border-solid border-secondary"
             : "max-md:-translate-y-full ease-in-out duration-500",

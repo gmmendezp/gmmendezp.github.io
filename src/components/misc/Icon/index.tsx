@@ -1,12 +1,26 @@
-import * as icons from "react-feather";
+import {
+  type IconProps as FeatherIconProps,
+  GitHub,
+  Linkedin,
+} from "react-feather";
 
-interface IconProps extends icons.IconProps {
+const icons = {
+  GitHub,
+  Linkedin,
+};
+
+interface IconProps extends FeatherIconProps {
   name: string;
 }
 
+function isIconName(name: string): name is keyof typeof icons {
+  return name in icons;
+}
+
 export function Icon({ name, ...props }: IconProps) {
-  if (!Object.keys(icons).includes(name)) return <div />;
-  const IconComponent = icons[name as keyof typeof icons];
+  if (!isIconName(name)) return <div />;
+
+  const IconComponent = icons[name];
   return <IconComponent {...props} />;
 }
 

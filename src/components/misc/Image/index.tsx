@@ -4,7 +4,14 @@ interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   image: string;
 }
 
-export const Image = ({ image, className, alt, ...props }: ImageProps) => {
+export const Image = ({
+  image,
+  className,
+  alt,
+  loading = "lazy",
+  decoding = "async",
+  ...props
+}: ImageProps) => {
   const imageURL =
     !image || image.includes("http")
       ? image
@@ -13,6 +20,8 @@ export const Image = ({ image, className, alt, ...props }: ImageProps) => {
     <img
       src={imageURL}
       className={clsx(className, "block max-w-full h-auto")}
+      loading={loading}
+      decoding={decoding}
       {...props}
       alt={alt}
     />

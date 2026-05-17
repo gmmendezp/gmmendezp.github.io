@@ -7,7 +7,7 @@ export default (
       lastName: "last-name",
       label: "label",
       email: "email",
-      image: "arcade.png",
+      image: "arcade.webp",
     }}
     social={[
       { name: "Linkedin", url: "#" },

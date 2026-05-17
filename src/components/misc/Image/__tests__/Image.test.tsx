@@ -33,10 +33,10 @@ describe("Image", () => {
   });
 
   it("resolves local asset paths using URL constructor", () => {
-    const { container } = render(<Image image="profile.jpg" />);
+    const { container } = render(<Image image="profile.webp" />);
     const img = container.querySelector("img");
     expect(img).toHaveAttribute("src");
-    expect(img?.getAttribute("src")).not.toBe("profile.jpg");
+    expect(img?.getAttribute("src")).not.toBe("profile.webp");
   });
 
   it("omits src attribute for empty image string", () => {

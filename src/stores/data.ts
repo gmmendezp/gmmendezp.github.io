@@ -82,11 +82,11 @@ export const useDataStore = create(() => ({
     lastName: "Méndez",
     label: "Full stack developer",
     email: "gmmendezp@gmail.com",
-    image: "profile.jpg",
+    image: "profile.webp",
   },
   projects: [
     {
-      image: "portfolio-vite.png",
+      image: "portfolio-vite.webp",
       title: "Resume/Portfolio",
       summary:
         "New version of the portfolio static website done using React, Vite, Zustand, Tailwind, etc.",
@@ -94,14 +94,14 @@ export const useDataStore = create(() => ({
       codeURL: "https://github.com/gmmendezp/portfolio-vite",
     },
     {
-      image: "portfolio.png",
+      image: "portfolio.webp",
       title: "Old Resume/Portfolio",
       summary:
         "Old codebase with improvements done to the portfolio and interactive resume projects for Udacity's Front End Nanodegree. This version was done using React, create-react-app, Webpack, Sass and Babel.",
       codeURL: "https://github.com/gmmendezp/portfolio",
     },
     {
-      image: "neighborhood.png",
+      image: "neighborhood.webp",
       title: "Neighborhood Map",
       summary:
         "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
@@ -110,21 +110,21 @@ export const useDataStore = create(() => ({
         "https://github.com/gmmendezp/frontend-nanodegree-neighborhood-map",
     },
     {
-      image: "nyssa.png",
+      image: "nyssa.webp",
       title: "Nyssa FE Project Generator",
       summary:
         "Yeoman generator to create Front End projects using React, Babel, Jest, ESLint and other technologies.",
       codeURL: "https://gitlab.com/gmmendezp/generator-nyssa-fe",
     },
     {
-      image: "sentry.png",
+      image: "sentry.webp",
       title: "Dota 2 Sentry Bot",
       summary:
         "Node library to gather Dota 2 player information as MMR, stats and lobby creation/management.",
       codeURL: "https://gitlab.com/DogShell_Development/sentry",
     },
     {
-      image: "arcade.png",
+      image: "arcade.webp",
       title: "Classic Arcade Game Clone",
       summary:
         "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
@@ -132,7 +132,7 @@ export const useDataStore = create(() => ({
       codeURL: "https://github.com/gmmendezp/frontend-nanodegree-arcade-game",
     },
     {
-      image: "feedreader.png",
+      image: "feedreader.webp",
       title: "Feed Reader Testing",
       summary:
         "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",

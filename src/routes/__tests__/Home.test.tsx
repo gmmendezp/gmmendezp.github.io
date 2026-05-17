@@ -12,19 +12,19 @@ describe("Home", () => {
     );
   });
 
-  it("renders all section headings", () => {
+  it("renders all section headings", async () => {
     render(<Home />);
     expect(
       screen.getByRole("heading", { level: 3, name: "About" }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { level: 3, name: "Portfolio" }),
+      await screen.findByRole("heading", { level: 3, name: "Portfolio" }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { level: 3, name: "Experience" }),
+      await screen.findByRole("heading", { level: 3, name: "Experience" }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { level: 3, name: "Education" }),
+      await screen.findByRole("heading", { level: 3, name: "Education" }),
     ).toBeInTheDocument();
   });
 
@@ -53,26 +53,28 @@ describe("Home", () => {
     expect(screen.getByText(/strong web developer/i)).toBeInTheDocument();
   });
 
-  it("renders experience items from store", () => {
+  it("renders experience items from store", async () => {
     render(<Home />);
-    expect(screen.getByText("Gorilla Logic")).toBeInTheDocument();
-    expect(screen.getByText("Web Engineer")).toBeInTheDocument();
-    expect(screen.getByText("Edify Software Consulting")).toBeInTheDocument();
+    expect(await screen.findByText("Gorilla Logic")).toBeInTheDocument();
+    expect(await screen.findByText("Web Engineer")).toBeInTheDocument();
+    expect(
+      await screen.findByText("Edify Software Consulting"),
+    ).toBeInTheDocument();
   });
 
-  it("renders education items from store", () => {
+  it("renders education items from store", async () => {
     render(<Home />);
     expect(
-      screen.getByText("Universidad Nacional de Costa Rica"),
+      await screen.findByText("Universidad Nacional de Costa Rica"),
     ).toBeInTheDocument();
-    expect(screen.getByText("Computer Science")).toBeInTheDocument();
+    expect(await screen.findByText("Computer Science")).toBeInTheDocument();
   });
 
-  it("renders project items from store", () => {
+  it("renders project items from store", async () => {
     render(<Home />);
-    expect(screen.getByText("Resume/Portfolio")).toBeInTheDocument();
-    expect(screen.getByText("Neighborhood Map")).toBeInTheDocument();
-    expect(screen.getByText("Dota 2 Sentry Bot")).toBeInTheDocument();
+    expect(await screen.findByText("Resume/Portfolio")).toBeInTheDocument();
+    expect(await screen.findByText("Neighborhood Map")).toBeInTheDocument();
+    expect(await screen.findByText("Dota 2 Sentry Bot")).toBeInTheDocument();
   });
 
   it("renders social links from store", () => {
