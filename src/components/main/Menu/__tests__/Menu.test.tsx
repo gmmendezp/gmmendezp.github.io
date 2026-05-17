@@ -11,6 +11,9 @@ describe("Menu", () => {
 
   it("renders all section links", () => {
     render(<Menu sections={sections} />);
+    expect(
+      screen.getByRole("navigation", { name: /main navigation/i }),
+    ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /about/i })).toHaveAttribute(
       "href",
       "#about",
@@ -51,5 +54,20 @@ describe("Menu", () => {
 
     expect(nav).toHaveClass("max-md:translate-y-px");
     expect(nav).not.toHaveClass("max-md:-translate-y-full");
+  });
+
+  it("closes menu on link click", async () => {
+    const user = userEvent.setup();
+    const { container } = render(<Menu sections={sections} />);
+    const nav = container.querySelector("nav");
+    const toggleButton = screen.getByRole("button", {
+      name: /toggle navigation menu/i,
+    });
+
+    await user.click(toggleButton);
+    await user.click(screen.getByRole("link", { name: /about/i }));
+
+    expect(nav).toHaveClass("max-md:-translate-y-full");
+    expect(nav).not.toHaveClass("max-md:translate-y-px");
   });
 });

@@ -3,6 +3,7 @@ import About from "../components/main/About";
 import Footer from "../components/main/Footer";
 import Menu from "../components/main/Menu";
 import Profile from "../components/main/Profile";
+import BackToTop from "../components/misc/BackToTop";
 import { useDataStore } from "../stores/data";
 
 const loadExperience = () => import("../components/main/Experience");
@@ -26,7 +27,7 @@ const Home = () => {
     useDataStore();
 
   return (
-    <div className="relative mx-auto max-w-7xl">
+    <div id="top" className="relative mx-auto max-w-7xl">
       <Menu
         sections={[
           { name: "About", href: "#about" },
@@ -47,6 +48,7 @@ const Home = () => {
         <LazyEducation education={education} />
       </Suspense>
       <Footer text={footer} />
+      <BackToTop />
     </div>
   );
 };

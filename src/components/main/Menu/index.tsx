@@ -9,12 +9,13 @@ interface MenuProps {
 
 export const Menu = ({ sections }: MenuProps) => {
   const [showMenu, setShowMenu] = useState(false);
-  const toggleMenu = () => setShowMenu(!showMenu);
+  const toggleMenu = () => setShowMenu((visible) => !visible);
 
   return (
     <section>
       <nav
         id="main-menu"
+        aria-label="Main navigation"
         className={clsx(
           "max-w-7xl flex flex-wrap justify-end fixed z-30 w-full bg-menu mt-0 p-0 list-none max-md:top-12",
           showMenu
@@ -27,6 +28,7 @@ export const Menu = ({ sections }: MenuProps) => {
             className="max-md:w-full p-4 lowercase hover:bg-menu-hover last:mr-12"
             key={section.name}
             href={section.href}
+            onClick={() => setShowMenu(false)}
           >
             {section.name}
           </Link>
@@ -38,10 +40,14 @@ export const Menu = ({ sections }: MenuProps) => {
           aria-controls="main-menu"
           aria-expanded={showMenu}
           aria-label="Toggle navigation menu"
-          className="m-1.5 rounded border border-solid border-white p-2.5 font-bold lowercase"
+          className="m-1.5 rounded border border-solid border-secondary p-2.5 font-bold lowercase"
           onClick={toggleMenu}
         >
-          <MenuIcon />
+          <MenuIcon
+            className="text-secondary"
+            aria-hidden="true"
+            focusable="false"
+          />
         </button>
       </div>
     </section>
