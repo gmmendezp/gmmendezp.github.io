@@ -41,7 +41,7 @@ describe("ExperienceItem", () => {
     render(<ExperienceItem data={mockExperience[0]} />);
     expect(screen.getByText("Developer")).toBeInTheDocument();
     expect(screen.getByText("Acme Inc")).toBeInTheDocument();
-    expect(screen.getByText("2020-01 - 2023-12")).toBeInTheDocument();
+    expect(screen.getByText("Jan 2020 - Dec 2023")).toBeInTheDocument();
   });
 
   it("renders summary", () => {

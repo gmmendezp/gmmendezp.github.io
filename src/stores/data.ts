@@ -2,13 +2,13 @@ import { create } from "zustand";
 
 export const useDataStore = create(() => ({
   about: [
-    "Strong Web Developer with extensive experience in front-end and full-stack development. Proficient in a wide range of web technologies and frameworks, including React, Next.js, Typescript, Redux, and more. With proven ability to develop and maintain web applications with a focus on performance and user experience. Adept at problem-solving and continuously learning new technologies to stay ahead in the field.",
+    "Front-end focused web developer with strong React, Next.js, and TypeScript experience. I build production web applications, integrate APIs, write tests, and care about performance, accessibility, and code that is easy to maintain. I’m comfortable learning new domains and working closely with product and engineering teams.",
   ],
   education: [
     {
       institution: "Universidad Nacional de Costa Rica",
       area: "Computer Science",
-      studyType: "Bachelors",
+      studyType: "Bachelor's",
       startDate: "2007-02-15",
       endDate: "2012-05-04",
     },
@@ -22,7 +22,7 @@ export const useDataStore = create(() => ({
     {
       institution: "SCRUMStudy",
       area: "Scrum Fundamentals Certified (SFC)",
-      studyType: "Online Acreditation",
+      studyType: "Online Accreditation",
       startDate: "2015",
       endDate: "2015",
     },
@@ -34,7 +34,7 @@ export const useDataStore = create(() => ({
       startDate: "2019-10-27",
       endDate: "2023-11-04",
       summary:
-        "Development of asset localization app with indoor maps using Mapbox and React. Front End development of developer portal for payments API using Next.js, React Typescript, Styled Components, Jest, enzyme, AWS Lambdas, DynamoDB, Cognito, etc. Site features development for a company in the food industry using React, Redux, Sass Jest, React Testing Library, optimizely, ruby & rails. Front end development for a refinancing company to digitize the workflow using React, Redux, Typescript, Jest, Material UI, styled components, formik, yup and others.",
+        "Built React tools for asset localization with indoor maps using Mapbox. Worked on a React/Next.js developer portal for payments APIs, including integrations with AWS Lambda, DynamoDB, and Cognito. Contributed to production React apps for food industry and refinancing workflows, using Redux, Sass, Styled Components, Jest, React Testing Library, Material UI, Formik, and Yup across different projects.",
     },
     {
       position: "Software Engineer",
@@ -42,7 +42,7 @@ export const useDataStore = create(() => ({
       startDate: "2018-08-20",
       endDate: "2019-10-20",
       summary:
-        "Front end development and maintenance of React/Node fashion analytics project. Small Front-End project in VueJS.",
+        "Built and maintained React and Node.js features for a fashion analytics platform, with additional work on a smaller Vue.js front-end project.",
     },
     {
       position: "Web Developer",
@@ -50,15 +50,15 @@ export const useDataStore = create(() => ({
       startDate: "2015-11-23",
       endDate: "2018-08-10",
       summary:
-        "Development of projects for education entities. Projects are developed using Javascript, Ember, Java, Spring, CakePHP, MySQL, PostgreSQL, MongoDB, jQuery, Sass, etc.",
+        "Built web applications for clients in the education industry using JavaScript, Ember, Java, Spring, CakePHP, MySQL, PostgreSQL, MongoDB, jQuery, and Sass.",
     },
     {
       position: "Java Developer",
       company: "PrestoSports",
       startDate: "2013-08-19",
-      endDate: "2015-11-1315",
+      endDate: "2015-11-15",
       summary:
-        "Continuous development of a CMS for college sports teams. Using Java, Spring, GWT, Javascript, jQuery, MySQL and others.",
+        "Maintained and extended a CMS for college sports teams using Java, Spring, GWT, JavaScript, jQuery, and MySQL.",
     },
     {
       company: "Independent",
@@ -66,7 +66,7 @@ export const useDataStore = create(() => ({
       startDate: "2013-05-06",
       endDate: "2014-02-04",
       summary:
-        "Development of scripting projects using R and python. The projects involved parsing xml, performing data queries, creating plots and others.",
+        "Built R and Python scripts for XML parsing, data queries, plotting, and automation tasks.",
     },
     {
       position: "Software Engineer",
@@ -74,7 +74,7 @@ export const useDataStore = create(() => ({
       startDate: "2011-06-11",
       endDate: "2013-04-26",
       summary:
-        "Requirements, tests and code development for avionics systems following the DO-178B standard and made in C, C++ and assembly.",
+        "Worked on requirements, tests, and code for avionics systems following the DO-178B standard using C, C++, and assembly.",
     },
   ],
   info: {
@@ -89,7 +89,7 @@ export const useDataStore = create(() => ({
       image: "portfolio-vite.webp",
       title: "Resume/Portfolio",
       summary:
-        "New version of the portfolio static website done using React, Vite, Zustand, Tailwind, etc.",
+        "Portfolio and interactive resume rebuilt with React, Vite, TypeScript, Zustand, Tailwind, and automated tests.",
       demoURL: "https://gmmendezp.github.io/",
       codeURL: "https://github.com/gmmendezp/portfolio-vite",
     },
@@ -97,14 +97,14 @@ export const useDataStore = create(() => ({
       image: "portfolio.webp",
       title: "Old Resume/Portfolio",
       summary:
-        "Old codebase with improvements done to the portfolio and interactive resume projects for Udacity's Front End Nanodegree. This version was done using React, create-react-app, Webpack, Sass and Babel.",
+        "Earlier version of this portfolio, originally built for Udacity's Front-End Nanodegree with React, Create React App, Webpack, Sass, and Babel.",
       codeURL: "https://github.com/gmmendezp/portfolio",
     },
     {
       image: "neighborhood.webp",
       title: "Neighborhood Map",
       summary:
-        "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
+        "A Udacity project built with Knockout, featuring searchable map landmarks and data from Foursquare and Wikipedia.",
       demoURL: "frontend-nanodegree-neighborhood-map/",
       codeURL:
         "https://github.com/gmmendezp/frontend-nanodegree-neighborhood-map",
@@ -113,7 +113,7 @@ export const useDataStore = create(() => ({
       image: "nyssa.webp",
       title: "Nyssa FE Project Generator",
       summary:
-        "Yeoman generator to create Front End projects using React, Babel, Jest, ESLint and other technologies.",
+        "Yeoman generator for scaffolding React front-end projects with Babel, Jest, ESLint, and related tooling.",
       codeURL: "https://gitlab.com/gmmendezp/generator-nyssa-fe",
     },
     {
@@ -146,9 +146,9 @@ export const useDataStore = create(() => ({
       url: "https://github.com/gmmendezp",
     },
     {
-      name: "Linkedin",
+      name: "LinkedIn",
       url: "https://www.linkedin.com/in/martín-méndez-38aab22b",
     },
   ],
-  footer: "© 2024 Martin Mendez. All rights reserved",
+  footer: `© ${new Date().getFullYear()} Martín Méndez. All rights reserved`,
 }));

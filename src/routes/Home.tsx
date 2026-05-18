@@ -31,8 +31,8 @@ const Home = () => {
       <Menu
         sections={[
           { name: "About", href: "#about" },
-          { name: "Portfolio", href: "#portfolio" },
           { name: "Experience", href: "#experience" },
+          { name: "Portfolio", href: "#portfolio" },
           { name: "Education", href: "#education" },
         ]}
       />

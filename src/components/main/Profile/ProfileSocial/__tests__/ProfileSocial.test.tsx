@@ -5,13 +5,16 @@ describe("ProfileSocial", () => {
   it("renders social links", () => {
     const data = [
       { name: "GitHub", url: "https://github.com/user" },
-      { name: "Linkedin", url: "https://linkedin.com/in/user" },
+      { name: "LinkedIn", url: "https://linkedin.com/in/user" },
     ];
     render(<ProfileSocial data={data} />);
-    const links = screen.getAllByRole("link");
-    expect(links).toHaveLength(2);
-    expect(links[0]).toHaveAttribute("href", "https://github.com/user");
-    expect(links[1]).toHaveAttribute("href", "https://linkedin.com/in/user");
+    expect(screen.getAllByRole("link")).toHaveLength(2);
+    expect(
+      screen.getByRole("link", { name: "GitHub profile" }),
+    ).toHaveAttribute("href", "https://github.com/user");
+    expect(
+      screen.getByRole("link", { name: "LinkedIn profile" }),
+    ).toHaveAttribute("href", "https://linkedin.com/in/user");
   });
 
   it("handles empty data", () => {

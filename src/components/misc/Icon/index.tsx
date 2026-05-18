@@ -6,22 +6,20 @@ import {
 
 const icons = {
   GitHub,
-  Linkedin,
+  LinkedIn: Linkedin,
 };
 
 interface IconProps extends FeatherIconProps {
   name: string;
 }
 
-function isIconName(name: string): name is keyof typeof icons {
-  return name in icons;
-}
+const isIconName = (name: string): name is keyof typeof icons => name in icons;
 
-export function Icon({ name, ...props }: IconProps) {
-  if (!isIconName(name)) return <div />;
+export const Icon = ({ name, ...props }: IconProps) => {
+  if (!isIconName(name)) return null;
 
   const IconComponent = icons[name];
   return <IconComponent {...props} />;
-}
+};
 
 export default Icon;

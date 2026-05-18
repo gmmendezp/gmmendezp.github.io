@@ -41,7 +41,7 @@ describe("EducationItem", () => {
     render(<EducationItem data={mockEducation[0]} />);
     expect(screen.getByText("Computer Science")).toBeInTheDocument();
     expect(screen.getByText("University")).toBeInTheDocument();
-    expect(screen.getByText("2010-09 - 2014-06")).toBeInTheDocument();
+    expect(screen.getByText("Sep 2010 - Jun 2014")).toBeInTheDocument();
     expect(screen.getByText("Bachelors")).toBeInTheDocument();
   });
 });

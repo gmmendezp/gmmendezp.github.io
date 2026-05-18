@@ -8,10 +8,10 @@ describe("Icon", () => {
     expect(svg).toBeInTheDocument();
   });
 
-  it("renders empty div for an invalid icon name", () => {
+  it("renders nothing for an invalid icon name", () => {
     const { container } = render(<Icon name="NonExistentIcon" />);
     expect(container.querySelector("svg")).not.toBeInTheDocument();
-    expect(container.querySelector("div")).toBeInTheDocument();
+    expect(container.firstChild).toBeNull();
   });
 
   it("passes size prop to icon", () => {
@@ -32,6 +32,6 @@ describe("Icon", () => {
   it("matches icon names case-sensitively", () => {
     const { container } = render(<Icon name="github" />);
     expect(container.querySelector("svg")).not.toBeInTheDocument();
-    expect(container.querySelector("div")).toBeInTheDocument();
+    expect(container.firstChild).toBeNull();
   });
 });

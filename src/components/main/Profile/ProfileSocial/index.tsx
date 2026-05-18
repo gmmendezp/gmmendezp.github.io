@@ -13,6 +13,7 @@ export const ProfileSocial = ({ data }: ProfileSocialProps) => (
           className="text-sm text-primary no-underline"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`${profile.name} profile`}
         >
           <Icon name={profile.name} />
         </a>

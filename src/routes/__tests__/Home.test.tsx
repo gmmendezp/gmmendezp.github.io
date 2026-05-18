@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import Home from "../Home";
 
 describe("Home", () => {
@@ -30,6 +30,15 @@ describe("Home", () => {
 
   it("renders menu navigation links", () => {
     render(<Home />);
+    const navigation = screen.getByRole("navigation", {
+      name: /main navigation/i,
+    });
+
+    expect(
+      within(navigation)
+        .getAllByRole("link")
+        .map((link) => link.textContent),
+    ).toEqual(["About", "Experience", "Portfolio", "Education"]);
     expect(screen.getByRole("link", { name: /about/i })).toHaveAttribute(
       "href",
       "#about",
@@ -50,7 +59,9 @@ describe("Home", () => {
 
   it("renders about text from store", () => {
     render(<Home />);
-    expect(screen.getByText(/strong web developer/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/front-end focused web developer/i),
+    ).toBeInTheDocument();
   });
 
   it("renders experience items from store", async () => {
@@ -97,7 +108,9 @@ describe("Home", () => {
   it("renders footer from store", () => {
     render(<Home />);
     expect(
-      screen.getByText("© 2024 Martin Mendez. All rights reserved"),
+      screen.getByText(
+        `© ${new Date().getFullYear()} Martín Méndez. All rights reserved`,
+      ),
     ).toBeInTheDocument();
   });
 });
