@@ -25,4 +25,12 @@ describe("ProfileImage", () => {
       "Portrait of Test User",
     );
   });
+
+  it("sets intrinsic image dimensions", () => {
+    const { container } = render(
+      <ProfileImage image="profile.webp" alt="Portrait of Test User" />,
+    );
+    expect(container.querySelector("img")).toHaveAttribute("width", "840");
+    expect(container.querySelector("img")).toHaveAttribute("height", "630");
+  });
 });

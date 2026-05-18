@@ -18,8 +18,10 @@ export const Project = ({ project }: ProjectProps) => (
   <div className="flex flex-wrap justify-end md:w-[45%] w-full align-start gap-2">
     <Image
       image={project.image}
-      className="mb-4 mr-auto border-2 border-solid border-secondary rounded h-[200px]"
+      className="mb-4 mr-auto border-2 border-solid border-secondary rounded"
       alt={`${project.title} project screenshot`}
+      width={712}
+      height={400}
     />
     <ProjectText className="font-bold text-xl">{project.title}</ProjectText>
     <ProjectText className="text-xs mt-1 mx-0 mb-2.5">

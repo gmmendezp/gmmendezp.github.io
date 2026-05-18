@@ -62,4 +62,12 @@ describe("Project", () => {
       "https://code1.com",
     );
   });
+
+  it("sets intrinsic screenshot dimensions", () => {
+    render(<Project project={mockProjects[0]} />);
+    const image = screen.getByAltText("Project One project screenshot");
+
+    expect(image).toHaveAttribute("width", "712");
+    expect(image).toHaveAttribute("height", "400");
+  });
 });

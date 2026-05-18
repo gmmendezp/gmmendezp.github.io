@@ -11,6 +11,8 @@ export const ProfileImage = ({ image, alt }: ProfileImageProps) => (
       image={image}
       className="rounded-3xl w-[420px] max-w-[90%] border-2 border-dotted border-primary my-0 mx-auto"
       alt={alt}
+      width={840}
+      height={630}
       loading="eager"
       fetchPriority="high"
     />

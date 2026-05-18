@@ -105,7 +105,8 @@ export const useDataStore = create(() => ({
       title: "Neighborhood Map",
       summary:
         "A Udacity project built with Knockout, featuring searchable map landmarks and data from Foursquare and Wikipedia.",
-      demoURL: "frontend-nanodegree-neighborhood-map/",
+      demoURL:
+        "https://gmmendezp.github.io/frontend-nanodegree-neighborhood-map/",
       codeURL:
         "https://github.com/gmmendezp/frontend-nanodegree-neighborhood-map",
     },
@@ -128,7 +129,7 @@ export const useDataStore = create(() => ({
       title: "Classic Arcade Game Clone",
       summary:
         "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
-      demoURL: "frontend-nanodegree-arcade-game/",
+      demoURL: "https://gmmendezp.github.io/frontend-nanodegree-arcade-game/",
       codeURL: "https://github.com/gmmendezp/frontend-nanodegree-arcade-game",
     },
     {
@@ -136,7 +137,7 @@ export const useDataStore = create(() => ({
       title: "Feed Reader Testing",
       summary:
         "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",
-      demoURL: "frontend-nanodegree-feedreader/",
+      demoURL: "https://gmmendezp.github.io/frontend-nanodegree-feedreader/",
       codeURL: "https://github.com/gmmendezp/frontend-nanodegree-feedreader",
     },
   ],
