@@ -91,7 +91,7 @@ export const useDataStore = create(() => ({
       summary:
         "Portfolio and interactive resume rebuilt with React, Vite, TypeScript, Zustand, Tailwind, and automated tests.",
       demoURL: "https://gmmendezp.github.io/",
-      codeURL: "https://github.com/gmmendezp/portfolio-vite",
+      codeURL: "https://github.com/gmmendezp/gmmendezp.github.io",
     },
     {
       image: "portfolio.webp",
