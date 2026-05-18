@@ -13,7 +13,7 @@ export const Image = ({
   ...props
 }: ImageProps) => {
   const imageURL =
-    !image || image.includes("http")
+    !image || image.startsWith("http://") || image.startsWith("https://")
       ? image
       : new URL(`../../../assets/${image}`, import.meta.url).href;
   return (

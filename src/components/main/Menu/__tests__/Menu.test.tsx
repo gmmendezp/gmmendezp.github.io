@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { sections } from "../../../../data/navigation";
+import { useNavigationStore } from "../../../../stores/navigationStore";
 import Menu from "..";
 
 describe("Menu", () => {
-  const sections = [
-    { name: "About", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Experience", href: "#experience" },
-  ];
+  beforeEach(() => {
+    useNavigationStore.setState({ activeSection: "about", isMenuOpen: false });
+  });
 
   it("renders all section links", () => {
     render(<Menu sections={sections} />);
@@ -69,5 +69,21 @@ describe("Menu", () => {
 
     expect(nav).toHaveClass("max-md:-translate-y-full");
     expect(nav).not.toHaveClass("max-md:translate-y-px");
+  });
+
+  it("marks the active section from the store", () => {
+    useNavigationStore.setState({ activeSection: "portfolio" });
+    render(<Menu sections={sections} />);
+
+    expect(screen.getByRole("link", { name: /portfolio/i })).toHaveAttribute(
+      "aria-current",
+      "location",
+    );
+    expect(screen.getByRole("link", { name: /portfolio/i })).toHaveClass(
+      "bg-menu-hover",
+    );
+    expect(screen.getByRole("link", { name: /about/i })).not.toHaveAttribute(
+      "aria-current",
+    );
   });
 });

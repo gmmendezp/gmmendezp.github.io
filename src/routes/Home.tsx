@@ -4,7 +4,9 @@ import Footer from "../components/main/Footer";
 import Menu from "../components/main/Menu";
 import Profile from "../components/main/Profile";
 import BackToTop from "../components/misc/BackToTop";
-import { useDataStore } from "../stores/data";
+import { sections } from "../data/navigation";
+import { resumeData } from "../data/resume";
+import { useActiveSectionOnScroll } from "../hooks/useActiveSectionOnScroll";
 
 const loadExperience = () => import("../components/main/Experience");
 const loadProjects = () => import("../components/main/Projects");
@@ -23,19 +25,14 @@ const SectionFallback = ({ minHeight }: { minHeight: number }) => (
 );
 
 const Home = () => {
+  useActiveSectionOnScroll();
+
   const { about, education, experience, info, projects, social, footer } =
-    useDataStore();
+    resumeData;
 
   return (
     <div id="top" className="relative mx-auto max-w-7xl">
-      <Menu
-        sections={[
-          { name: "About", href: "#about" },
-          { name: "Experience", href: "#experience" },
-          { name: "Portfolio", href: "#portfolio" },
-          { name: "Education", href: "#education" },
-        ]}
-      />
+      <Menu sections={sections} />
       <Profile social={social} info={info} />
       <About data={about} />
       <Suspense fallback={<SectionFallback minHeight={360} />}>

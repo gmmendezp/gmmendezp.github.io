@@ -22,8 +22,6 @@ export const ProjectButton = ({
     >
       <Button className="w-[80px]">{children}</Button>
     </Link>
-  ) : (
-    ""
-  );
+  ) : null;
 
 export default ProjectButton;

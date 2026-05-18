@@ -1,6 +1,4 @@
-import { create } from "zustand";
-
-export const useDataStore = create(() => ({
+export const resumeData = {
   about: [
     "Front-end focused web developer with strong React, Next.js, and TypeScript experience. I build production web applications, integrate APIs, write tests, and care about performance, accessibility, and code that is easy to maintain. I’m comfortable learning new domains and working closely with product and engineering teams.",
   ],
@@ -152,4 +150,6 @@ export const useDataStore = create(() => ({
     },
   ],
   footer: `© ${new Date().getFullYear()} Martín Méndez. All rights reserved`,
-}));
+};
+
+export type ResumeData = typeof resumeData;

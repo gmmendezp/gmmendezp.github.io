@@ -1,12 +1,4 @@
+import { sections } from "../../../data/navigation";
 import { Menu } from ".";
 
-export default (
-  <Menu
-    sections={[
-      { name: "About", href: "#about" },
-      { name: "Portfolio", href: "#portfolio" },
-      { name: "Experience", href: "#experience" },
-      { name: "Contact", href: "#contact" },
-    ]}
-  />
-);
+export default <Menu sections={sections} />;
