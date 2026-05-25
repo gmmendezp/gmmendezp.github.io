@@ -2,6 +2,7 @@ import { Projects } from ".";
 
 export default (
   <Projects
+    title="New Projects"
     projects={[
       {
         image: "neighborhood.webp",

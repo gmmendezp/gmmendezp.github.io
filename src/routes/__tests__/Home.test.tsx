@@ -21,6 +21,9 @@ describe("Home", () => {
       await screen.findByRole("heading", { level: 3, name: "Portfolio" }),
     ).toBeInTheDocument();
     expect(
+      await screen.findByRole("heading", { level: 3, name: "Old Projects" }),
+    ).toBeInTheDocument();
+    expect(
       await screen.findByRole("heading", { level: 3, name: "Experience" }),
     ).toBeInTheDocument();
     expect(

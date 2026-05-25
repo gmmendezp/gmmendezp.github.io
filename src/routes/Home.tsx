@@ -39,7 +39,17 @@ const Home = () => {
         <LazyExperience experience={experience} />
       </Suspense>
       <Suspense fallback={<SectionFallback minHeight={420} />}>
-        <LazyProjects projects={projects} />
+        <LazyProjects
+          id="portfolio"
+          title="Portfolio"
+          projects={projects.new}
+        />
+        <LazyProjects
+          id="old-projects"
+          layout="compact"
+          title="Old Projects"
+          projects={projects.old}
+        />
       </Suspense>
       <Suspense fallback={<SectionFallback minHeight={300} />}>
         <LazyEducation education={education} />

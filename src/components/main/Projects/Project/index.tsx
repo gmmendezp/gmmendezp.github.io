@@ -1,6 +1,9 @@
+import clsx from "clsx";
 import Image from "../../../misc/Image";
 import ProjectButton from "../ProjectButton";
 import ProjectText from "../ProjectText";
+
+export type ProjectLayout = "default" | "compact";
 
 export interface ProjectType {
   image: string;
@@ -11,11 +14,17 @@ export interface ProjectType {
 }
 
 interface ProjectProps {
+  layout?: ProjectLayout;
   project: ProjectType;
 }
 
-export const Project = ({ project }: ProjectProps) => (
-  <div className="flex flex-wrap justify-end md:w-[45%] w-full align-start gap-2">
+export const Project = ({ layout = "default", project }: ProjectProps) => (
+  <div
+    className={clsx(
+      "flex flex-wrap justify-end w-full align-start gap-2",
+      layout === "compact" ? "md:w-[45%] lg:w-[29%]" : "md:w-[45%]",
+    )}
+  >
     <Image
       image={project.image}
       className="mb-4 mr-auto border-2 border-solid border-secondary rounded"

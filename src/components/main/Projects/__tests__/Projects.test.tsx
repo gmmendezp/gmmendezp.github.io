@@ -26,6 +26,24 @@ describe("Projects", () => {
     );
   });
 
+  it("renders custom section title", () => {
+    render(<Projects title="New Projects" projects={mockProjects} />);
+    expect(screen.getByRole("heading", { level: 3 })).toHaveTextContent(
+      "New Projects",
+    );
+  });
+
+  it("sets custom section id", () => {
+    const { container } = render(
+      <Projects id="old-projects" projects={mockProjects} />,
+    );
+
+    expect(container.querySelector("section")).toHaveAttribute(
+      "id",
+      "old-projects",
+    );
+  });
+
   it("renders all project titles", () => {
     render(<Projects projects={mockProjects} />);
     expect(screen.getByText("Project One")).toBeInTheDocument();
@@ -69,5 +87,13 @@ describe("Project", () => {
 
     expect(image).toHaveAttribute("width", "712");
     expect(image).toHaveAttribute("height", "400");
+  });
+
+  it("uses compact layout classes", () => {
+    const { container } = render(
+      <Project layout="compact" project={mockProjects[0]} />,
+    );
+
+    expect(container.firstElementChild).toHaveClass("lg:w-[29%]");
   });
 });

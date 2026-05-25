@@ -82,63 +82,75 @@ export const resumeData = {
     email: "gmmendezp@gmail.com",
     image: "profile.webp",
   },
-  projects: [
-    {
-      image: "portfolio-vite.webp",
-      title: "Resume/Portfolio",
-      summary:
-        "Portfolio and interactive resume rebuilt with React, Vite, TypeScript, Zustand, Tailwind, and automated tests.",
-      demoURL: "https://gmmendezp.github.io/",
-      codeURL: "https://github.com/gmmendezp/gmmendezp.github.io",
-    },
-    {
-      image: "portfolio.webp",
-      title: "Old Resume/Portfolio",
-      summary:
-        "Earlier version of this portfolio, originally built for Udacity's Front-End Nanodegree with React, Create React App, Webpack, Sass, and Babel.",
-      codeURL: "https://github.com/gmmendezp/portfolio",
-    },
-    {
-      image: "neighborhood.webp",
-      title: "Neighborhood Map",
-      summary:
-        "A Udacity project built with Knockout, featuring searchable map landmarks and data from Foursquare and Wikipedia.",
-      demoURL:
-        "https://gmmendezp.github.io/frontend-nanodegree-neighborhood-map/",
-      codeURL:
-        "https://github.com/gmmendezp/frontend-nanodegree-neighborhood-map",
-    },
-    {
-      image: "nyssa.webp",
-      title: "Nyssa FE Project Generator",
-      summary:
-        "Yeoman generator for scaffolding React front-end projects with Babel, Jest, ESLint, and related tooling.",
-      codeURL: "https://gitlab.com/gmmendezp/generator-nyssa-fe",
-    },
-    {
-      image: "sentry.webp",
-      title: "Dota 2 Sentry Bot",
-      summary:
-        "Node library to gather Dota 2 player information as MMR, stats and lobby creation/management.",
-      codeURL: "https://gitlab.com/DogShell_Development/sentry",
-    },
-    {
-      image: "arcade.webp",
-      title: "Classic Arcade Game Clone",
-      summary:
-        "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
-      demoURL: "https://gmmendezp.github.io/frontend-nanodegree-arcade-game/",
-      codeURL: "https://github.com/gmmendezp/frontend-nanodegree-arcade-game",
-    },
-    {
-      image: "feedreader.webp",
-      title: "Feed Reader Testing",
-      summary:
-        "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",
-      demoURL: "https://gmmendezp.github.io/frontend-nanodegree-feedreader/",
-      codeURL: "https://github.com/gmmendezp/frontend-nanodegree-feedreader",
-    },
-  ],
+  projects: {
+    new: [
+      {
+        image: "anilist-compare.webp",
+        title: "Unofficial AniList Compare",
+        summary:
+          "React app for comparing two public AniList anime lists with user autocomplete, filtering, sorting, shareable URLs, and comparison logic.",
+        demoURL: "https://gmmendezp.github.io/unofficial-anilist-compare/",
+        codeURL: "https://github.com/gmmendezp/unofficial-anilist-compare",
+      },
+      {
+        image: "portfolio-vite.webp",
+        title: "Resume/Portfolio",
+        summary:
+          "Portfolio and interactive resume rebuilt with React, Vite, TypeScript, Zustand, Tailwind, and automated tests.",
+        demoURL: "https://gmmendezp.github.io/",
+        codeURL: "https://github.com/gmmendezp/gmmendezp.github.io",
+      },
+    ],
+    old: [
+      {
+        image: "portfolio.webp",
+        title: "Old Resume/Portfolio",
+        summary:
+          "Earlier version of this portfolio, originally built for Udacity's Front-End Nanodegree with React, Create React App, Webpack, Sass, and Babel.",
+        codeURL: "https://github.com/gmmendezp/portfolio",
+      },
+      {
+        image: "neighborhood.webp",
+        title: "Neighborhood Map",
+        summary:
+          "A Udacity project built with Knockout, featuring searchable map landmarks and data from Foursquare and Wikipedia.",
+        demoURL:
+          "https://gmmendezp.github.io/frontend-nanodegree-neighborhood-map/",
+        codeURL:
+          "https://github.com/gmmendezp/frontend-nanodegree-neighborhood-map",
+      },
+      {
+        image: "nyssa.webp",
+        title: "Nyssa FE Project Generator",
+        summary:
+          "Yeoman generator for scaffolding React front-end projects with Babel, Jest, ESLint, and related tooling.",
+        codeURL: "https://gitlab.com/gmmendezp/generator-nyssa-fe",
+      },
+      {
+        image: "sentry.webp",
+        title: "Dota 2 Sentry Bot",
+        summary:
+          "Node library to gather Dota 2 player information as MMR, stats and lobby creation/management.",
+        codeURL: "https://gitlab.com/DogShell_Development/sentry",
+      },
+      {
+        image: "arcade.webp",
+        title: "Classic Arcade Game Clone",
+        summary:
+          "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
+        demoURL: "https://gmmendezp.github.io/frontend-nanodegree-arcade-game/",
+        codeURL: "https://github.com/gmmendezp/frontend-nanodegree-arcade-game",
+      },
+      {
+        image: "feedreader.webp",
+        title: "Feed Reader Testing",
+        summary:
+          "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",
+        demoURL: "https://gmmendezp.github.io/frontend-nanodegree-feedreader/",
+        codeURL: "https://github.com/gmmendezp/frontend-nanodegree-feedreader",
+      },
+    ],
+  },
   social: [
     {
       name: "GitHub",
