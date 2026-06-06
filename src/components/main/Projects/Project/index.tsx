@@ -33,7 +33,7 @@ export const Project = ({ layout = "default", project }: ProjectProps) => (
       height={400}
     />
     <ProjectText className="font-bold text-xl">{project.title}</ProjectText>
-    <ProjectText className="text-xs mt-1 mx-0 mb-2.5">
+    <ProjectText className="text-sm mt-1 mx-0 mb-2.5">
       {project.summary}
     </ProjectText>
     {project.demoURL && (
