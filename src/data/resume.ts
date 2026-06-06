@@ -85,6 +85,14 @@ export const resumeData = {
   projects: {
     new: [
       {
+        image: "recipe-pantry-manager.webp",
+        title: "Recipe Pantry Manager",
+        summary:
+          "Full-stack recipe and pantry app where users save recipes, manage ingredients at home, and generate grocery lists that separate what they need to buy from what is already on hand.",
+        demoURL: "https://recipes.gmmendezp.dev/",
+        codeURL: "https://github.com/gmmendezp/recipe-pantry-manager",
+      },
+      {
         image: "anilist-compare.webp",
         title: "Unofficial AniList Compare",
         summary:
