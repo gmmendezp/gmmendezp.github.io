@@ -12,6 +12,7 @@ describe("Profile", () => {
     label: "Developer",
     email: "john@example.com",
     image: "profile.webp",
+    resumeURL: "/john-doe-resume.pdf",
   };
 
   it("renders name and label", () => {
@@ -36,5 +37,17 @@ describe("Profile", () => {
   it("renders profile image", () => {
     const { container } = render(<Profile social={social} info={info} />);
     expect(container.querySelector("img")).toBeInTheDocument();
+  });
+
+  it("renders résumé link", () => {
+    render(<Profile social={social} info={info} />);
+    expect(screen.getByRole("link", { name: "View Résumé" })).toHaveAttribute(
+      "href",
+      "/john-doe-resume.pdf",
+    );
+    expect(screen.getByRole("link", { name: "View Résumé" })).toHaveAttribute(
+      "target",
+      "_blank",
+    );
   });
 });

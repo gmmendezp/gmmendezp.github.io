@@ -2,9 +2,11 @@ import {
   type IconProps as FeatherIconProps,
   GitHub,
   Linkedin,
+  Mail,
 } from "react-feather";
 
 const icons = {
+  Email: Mail,
   GitHub,
   LinkedIn: Linkedin,
 };

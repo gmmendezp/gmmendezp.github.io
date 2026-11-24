@@ -37,7 +37,7 @@ export const Project = ({ layout = "default", project }: ProjectProps) => (
       {project.summary}
     </ProjectText>
     {project.demoURL && (
-      <ProjectButton url={project.demoURL}>Demo</ProjectButton>
+      <ProjectButton url={project.demoURL}>Live Demo</ProjectButton>
     )}
     {project.codeURL && (
       <ProjectButton url={project.codeURL}>Code</ProjectButton>

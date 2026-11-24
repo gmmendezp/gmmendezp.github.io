@@ -19,7 +19,7 @@ export const ExperienceItem = ({ data }: ExperienceItemProps) => (
     <p className="mt-0 text-sm my-px mx-2.5">
       {formatDateRange(data.startDate, data.endDate)}
     </p>
-    <p className="text-xs my-px mx-2.5 tracking-wider leading-5">
+    <p className="text-sm my-px mx-2.5 tracking-wider leading-5">
       {data.summary}
     </p>
   </div>

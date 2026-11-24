@@ -18,10 +18,9 @@ describe("Menu", () => {
       "href",
       "#about",
     );
-    expect(screen.getByRole("link", { name: /portfolio/i })).toHaveAttribute(
-      "href",
-      "#portfolio",
-    );
+    expect(
+      screen.getByRole("link", { name: /personal projects/i }),
+    ).toHaveAttribute("href", "#portfolio");
     expect(screen.getByRole("link", { name: /experience/i })).toHaveAttribute(
       "href",
       "#experience",
@@ -75,13 +74,12 @@ describe("Menu", () => {
     useNavigationStore.setState({ activeSection: "portfolio" });
     render(<Menu sections={sections} />);
 
-    expect(screen.getByRole("link", { name: /portfolio/i })).toHaveAttribute(
-      "aria-current",
-      "location",
-    );
-    expect(screen.getByRole("link", { name: /portfolio/i })).toHaveClass(
-      "bg-menu-hover",
-    );
+    expect(
+      screen.getByRole("link", { name: /personal projects/i }),
+    ).toHaveAttribute("aria-current", "location");
+    expect(
+      screen.getByRole("link", { name: /personal projects/i }),
+    ).toHaveClass("bg-menu-hover");
     expect(screen.getByRole("link", { name: /about/i })).not.toHaveAttribute(
       "aria-current",
     );

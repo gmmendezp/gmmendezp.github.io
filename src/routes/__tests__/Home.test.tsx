@@ -8,7 +8,7 @@ describe("Home", () => {
       "Martín Méndez",
     );
     expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(
-      "Full stack developer",
+      "Senior Frontend Engineer",
     );
   });
 
@@ -18,11 +18,14 @@ describe("Home", () => {
       screen.getByRole("heading", { level: 3, name: "About" }),
     ).toBeInTheDocument();
     expect(
-      await screen.findByRole("heading", { level: 3, name: "Portfolio" }),
+      await screen.findByRole("heading", {
+        level: 3,
+        name: "Personal Projects",
+      }),
     ).toBeInTheDocument();
     expect(
-      await screen.findByRole("heading", { level: 3, name: "Old Projects" }),
-    ).toBeInTheDocument();
+      screen.queryByRole("heading", { level: 3, name: "Old Projects" }),
+    ).not.toBeInTheDocument();
     expect(
       await screen.findByRole("heading", { level: 3, name: "Experience" }),
     ).toBeInTheDocument();
@@ -41,15 +44,14 @@ describe("Home", () => {
       within(navigation)
         .getAllByRole("link")
         .map((link) => link.textContent),
-    ).toEqual(["About", "Experience", "Portfolio", "Education"]);
+    ).toEqual(["About", "Experience", "Personal Projects", "Education"]);
     expect(screen.getByRole("link", { name: /about/i })).toHaveAttribute(
       "href",
       "#about",
     );
-    expect(screen.getByRole("link", { name: /portfolio/i })).toHaveAttribute(
-      "href",
-      "#portfolio",
-    );
+    expect(
+      screen.getByRole("link", { name: /personal projects/i }),
+    ).toHaveAttribute("href", "#portfolio");
     expect(screen.getByRole("link", { name: /experience/i })).toHaveAttribute(
       "href",
       "#experience",
@@ -63,7 +65,9 @@ describe("Home", () => {
   it("renders about text from store", () => {
     render(<Home />);
     expect(
-      screen.getByText(/front-end focused web developer/i),
+      screen.getByText(
+        /senior frontend engineer with extensive professional software development experience/i,
+      ),
     ).toBeInTheDocument();
   });
 
@@ -81,14 +85,18 @@ describe("Home", () => {
     expect(
       await screen.findByText("Universidad Nacional de Costa Rica"),
     ).toBeInTheDocument();
-    expect(await screen.findByText("Computer Science")).toBeInTheDocument();
+    expect(
+      await screen.findByText("Information Systems Engineering"),
+    ).toBeInTheDocument();
   });
 
   it("renders project items from store", async () => {
     render(<Home />);
-    expect(await screen.findByText("Resume/Portfolio")).toBeInTheDocument();
-    expect(await screen.findByText("Neighborhood Map")).toBeInTheDocument();
-    expect(await screen.findByText("Dota 2 Sentry Bot")).toBeInTheDocument();
+    expect(
+      await screen.findByText("Portfolio and Interactive Résumé"),
+    ).toBeInTheDocument();
+    expect(screen.queryByText("Neighborhood Map")).not.toBeInTheDocument();
+    expect(screen.queryByText("Dota 2 Sentry Bot")).not.toBeInTheDocument();
   });
 
   it("renders social links from store", () => {
@@ -98,14 +106,25 @@ describe("Home", () => {
       (l) => l.getAttribute("href") === "https://github.com/gmmendezp",
     );
     const linkedinLink = Array.from(links).find(
-      (l) =>
-        l.getAttribute("href") ===
-        "https://www.linkedin.com/in/martín-méndez-38aab22b",
+      (l) => l.getAttribute("href") === "https://www.linkedin.com/in/gmmendezp",
+    );
+    const emailLink = Array.from(links).find(
+      (l) => l.getAttribute("href") === "mailto:gmmendezp@gmail.com",
     );
     expect(githubLink).toBeInTheDocument();
     expect(githubLink).toHaveAttribute("target", "_blank");
     expect(linkedinLink).toBeInTheDocument();
     expect(linkedinLink).toHaveAttribute("target", "_blank");
+    expect(emailLink).toBeInTheDocument();
+    expect(emailLink).not.toHaveAttribute("target");
+  });
+
+  it("renders résumé link", () => {
+    render(<Home />);
+    expect(screen.getByRole("link", { name: "View Résumé" })).toHaveAttribute(
+      "href",
+      "/martin-mendez-resume.pdf",
+    );
   });
 
   it("renders footer from store", () => {

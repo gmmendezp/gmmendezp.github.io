@@ -4,7 +4,7 @@ Modernized portfolio and interactive resume project from Udacity's Front End Nan
 
 ## Demo
 
-[https://gmmendezp.github.io/](https://gmmendezp.github.io/)
+[https://gmmendezp.dev/](https://gmmendezp.dev/)
 
 ## Package manager
 

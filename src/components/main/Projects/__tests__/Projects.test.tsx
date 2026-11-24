@@ -58,9 +58,9 @@ describe("Project", () => {
     expect(screen.getByText("First project summary")).toBeInTheDocument();
   });
 
-  it("renders demo button when demoURL is provided", () => {
+  it("renders live demo button when demoURL is provided", () => {
     render(<Project project={mockProjects[0]} />);
-    expect(screen.getByRole("link", { name: /demo/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Live Demo" })).toHaveAttribute(
       "href",
       "https://demo1.com",
     );
@@ -69,7 +69,7 @@ describe("Project", () => {
   it("does not render demo button when demoURL is missing", () => {
     render(<Project project={mockProjects[1]} />);
     expect(
-      screen.queryByRole("link", { name: /demo/i }),
+      screen.queryByRole("link", { name: "Live Demo" }),
     ).not.toBeInTheDocument();
   });
 

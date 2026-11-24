@@ -1,11 +1,11 @@
 export const resumeData = {
   about: [
-    "Front-end focused web developer with strong React, Next.js, and TypeScript experience. I build production web applications, integrate APIs, write tests, and care about performance, accessibility, and code that is easy to maintain. I’m comfortable learning new domains and working closely with product and engineering teams.",
+    "Senior frontend engineer with extensive professional software development experience, specializing in React, TypeScript, and production web applications. Additional hands-on experience includes backend development, API integrations, authentication, databases, and cloud services.",
   ],
   education: [
     {
       institution: "Universidad Nacional de Costa Rica",
-      area: "Computer Science",
+      area: "Information Systems Engineering",
       studyType: "Bachelor's",
       startDate: "2007-02-15",
       endDate: "2012-05-04",
@@ -32,7 +32,7 @@ export const resumeData = {
       startDate: "2019-10-27",
       endDate: "2023-11-04",
       summary:
-        "Built React tools for asset localization with indoor maps using Mapbox. Worked on a React/Next.js developer portal for payments APIs, including integrations with AWS Lambda, DynamoDB, and Cognito. Contributed to production React apps for food industry and refinancing workflows, using Redux, Sass, Styled Components, Jest, React Testing Library, Material UI, Formik, and Yup across different projects.",
+        "Worked on React-based indoor asset-localization tools using Mapbox and a React/Next.js developer portal for payment APIs using AWS Lambda, DynamoDB, and Cognito. Contributions included sharing responsibility for frontend technical direction and implementation, working directly with stakeholders, coordinating with external DevOps support, delivering features from requirements through release, performing code reviews, and supporting testing.",
     },
     {
       position: "Software Engineer",
@@ -43,7 +43,7 @@ export const resumeData = {
         "Built and maintained React and Node.js features for a fashion analytics platform, with additional work on a smaller Vue.js front-end project.",
     },
     {
-      position: "Web Developer",
+      position: "Senior Full-Stack Developer",
       company: "Edify Software Consulting",
       startDate: "2015-11-23",
       endDate: "2018-08-10",
@@ -60,11 +60,11 @@ export const resumeData = {
     },
     {
       company: "Independent",
-      position: "Software Engineer",
+      position: "Freelance Software Developer — Part-time",
       startDate: "2013-05-06",
       endDate: "2014-02-04",
       summary:
-        "Built R and Python scripts for XML parsing, data queries, plotting, and automation tasks.",
+        "Developed R and Python scripts for XML parsing, data querying, visualization, and task automation.",
     },
     {
       position: "Software Engineer",
@@ -72,15 +72,16 @@ export const resumeData = {
       startDate: "2011-06-11",
       endDate: "2013-04-26",
       summary:
-        "Worked on requirements, tests, and code for avionics systems following the DO-178B standard using C, C++, and assembly.",
+        "Contributed to requirements, testing, and embedded software development for safety-critical avionics systems following the DO-178B standard, using C, C++, and assembly.",
     },
   ],
   info: {
     firstName: "Martín",
     lastName: "Méndez",
-    label: "Full stack developer",
+    label: "Senior Frontend Engineer",
     email: "gmmendezp@gmail.com",
     image: "profile.webp",
+    resumeURL: "/martin-mendez-resume.pdf",
   },
   projects: {
     new: [
@@ -88,7 +89,7 @@ export const resumeData = {
         image: "recipe-pantry-manager.webp",
         title: "Recipe Pantry Manager",
         summary:
-          "Full-stack recipe and pantry app where users save recipes, manage ingredients at home, and generate grocery lists that separate what they need to buy from what is already on hand.",
+          "Full-stack application for saving and importing recipes, managing pantry items, and generating grocery lists based on ingredients already on hand. Built with TanStack Start, React, TypeScript, Supabase, Drizzle, and Zod, with authentication, Row Level Security, unit tests, and Playwright end-to-end tests.",
         demoURL: "https://recipes.gmmendezp.dev/",
         codeURL: "https://github.com/gmmendezp/recipe-pantry-manager",
       },
@@ -96,16 +97,15 @@ export const resumeData = {
         image: "anilist-compare.webp",
         title: "Unofficial AniList Compare",
         summary:
-          "React app for comparing two public AniList anime lists with user autocomplete, filtering, sorting, shareable URLs, and comparison logic.",
+          "React and TypeScript application for comparing two public AniList anime lists through the AniList GraphQL API. Includes user autocomplete, filtering, sorting, shareable URLs, generated GraphQL types, automated tests, and continuous deployment to GitHub Pages.",
         demoURL: "https://gmmendezp.github.io/unofficial-anilist-compare/",
         codeURL: "https://github.com/gmmendezp/unofficial-anilist-compare",
       },
       {
         image: "portfolio-vite.webp",
-        title: "Resume/Portfolio",
+        title: "Portfolio and Interactive Résumé",
         summary:
-          "Portfolio and interactive resume rebuilt with React, Vite, TypeScript, Zustand, Tailwind, and automated tests.",
-        demoURL: "https://gmmendezp.github.io/",
+          "Portfolio and interactive résumé built with React, TypeScript, Vite, Zustand, and Tailwind. Includes reusable components, automated tests, component development with React Cosmos, and bundle analysis.",
         codeURL: "https://github.com/gmmendezp/gmmendezp.github.io",
       },
     ],
@@ -161,12 +161,16 @@ export const resumeData = {
   },
   social: [
     {
+      name: "Email",
+      url: "mailto:gmmendezp@gmail.com",
+    },
+    {
       name: "GitHub",
       url: "https://github.com/gmmendezp",
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/martín-méndez-38aab22b",
+      url: "https://www.linkedin.com/in/gmmendezp",
     },
   ],
   footer: `© ${new Date().getFullYear()} Martín Méndez. All rights reserved`,

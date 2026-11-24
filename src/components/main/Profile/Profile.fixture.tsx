@@ -8,6 +8,7 @@ export default (
       label: "label",
       email: "email",
       image: "arcade.webp",
+      resumeURL: "#",
     }}
     social={[
       { name: "Linkedin", url: "#" },
